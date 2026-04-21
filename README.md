@@ -41,7 +41,7 @@ The ALU is implemented using a combinational always block with a case statement 
 
 ## 🧪 Simulation Result
 
-![Waveform]("C:\Users\Arman\Downloads\waveform.png")
+![Waveform](webform.png)
 
 
 ##  How to Run (EDA Playground)
