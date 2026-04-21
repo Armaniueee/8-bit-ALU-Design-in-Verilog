@@ -40,8 +40,12 @@ The ALU is implemented using a combinational always block with a case statement 
 
 
 ## 🧪 Simulation Result
+1. Webform
 
 ![Waveform](waveform.png)
+
+2.
+![Output CSV]()
 
 
 ##  How to Run (EDA Playground)
