@@ -45,7 +45,7 @@ The ALU is implemented using a combinational always block with a case statement 
 ![Waveform](waveform.png)
 
 2.
-![Output CVG](SVG file.png)
+![CVG_File](SVG file.png)
 
 
 ##  How to Run (EDA Playground)
