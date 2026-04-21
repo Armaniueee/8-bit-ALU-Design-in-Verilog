@@ -1,0 +1,58 @@
+`timescale 1ns/1ps
+
+module alu_tb;
+
+reg [7:0] a, b;
+reg [2:0] sel;
+wire [7:0] result;
+wire carry, zero;
+
+// Instantiate ALU
+alu uut (
+.a(a),
+.b(b),
+.sel(sel),
+.result(result),
+.carry(carry),
+.zero(zero)
+);
+
+initial begin
+$dumpfile("wave.vcd");
+$dumpvars(0, alu_tb);
+
+```
+$display("Time\tA\tB\tSEL\tRESULT\tCARRY\tZERO");
+
+// ADD
+a = 10; b = 5; sel = 3'b000; #10;
+
+// SUB
+sel = 3'b001; #10;
+
+// AND
+a = 12; b = 10; sel = 3'b010; #10;
+
+// OR
+sel = 3'b011; #10;
+
+// XOR
+sel = 3'b100; #10;
+
+// SHIFT LEFT
+a = 3; sel = 3'b101; #10;
+
+// SHIFT RIGHT
+sel = 3'b110; #10;
+
+$finish;
+```
+
+end
+
+initial begin
+$monitor("%0t\t%d\t%d\t%b\t%d\t%b\t%b",
+$time, a, b, sel, result, carry, zero);
+end
+
+endmodule
